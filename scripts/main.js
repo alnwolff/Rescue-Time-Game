@@ -13,6 +13,12 @@ function draw () {
     game.draw();
 }
 
+function keyPressed() {
+	if (keyCode === 32) {
+		game.player.jump();
+	}
+}
+
 
 //without OOP - just to check the movements and gifs
 

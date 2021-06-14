@@ -5,7 +5,7 @@ class Game {
 	}
 
     setup() {
-		// this.player = new Player();
+		this.player = new Player();
 		this.background = new Background();
 		// this.obstacles = [];
 	}
@@ -20,10 +20,14 @@ class Game {
             { src: loadImage('../assets/background/layer02_Trees.png'), x: 0, speed: 5 },
             { src: loadImage('../assets/background/layer01_Ground.png'), x: 0, speed: 6 },
 		];
+
+        this.playerImage = loadImage('../assets/finn-walk.gif');
+
     }
 
     draw() {
 		clear();
 		this.background.draw();
+        this.player.draw();
     }
 }
