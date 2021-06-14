@@ -4,7 +4,7 @@ class Player {
 
         this.health = 100;
         this.velocity = 0;
-		this.gravity = 0.4 ;
+		this.gravity = 0.4;
 		this.width = 200;
 		this.height = 280;
 		this.x = 100;

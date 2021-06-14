@@ -1,12 +1,12 @@
 const game = new Game();
 
+function preload() {
+    game.preload();
+}
+
 function setup() {
     createCanvas(1200, 900);
     game.setup();
-}
-
-function preload() {
-    game.preload();
 }
 
 function draw () {

@@ -7,7 +7,7 @@ class Game {
     setup() {
 		this.player = new Player();
 		this.background = new Background();
-		// this.obstacles = [];
+		this.obstacles = [];
 	}
 
     preload() {
@@ -22,6 +22,7 @@ class Game {
 		];
 
         this.playerImage = loadImage('../assets/finn-walk.gif');
+        this.obstacleImage = loadImage('../assets/Hero-Bullet.gif');
 
     }
 
@@ -29,5 +30,23 @@ class Game {
 		clear();
 		this.background.draw();
         this.player.draw();
+
+        if (frameCount % 100 === 0) {
+			this.obstacles.push(new Obstacle(this.obstacleImage));
+			// console.log(this.obstacles);
+		}
+
+        this.obstacles.forEach(function (obstacle) {
+			obstacle.draw();
+		})
+		// we use array filter to remove coins that collide with the player from the array
+		this.obstacles = this.obstacles.filter(obstacle => {
+			if (obstacle.collision(this.player || (obstacle.x + obstacle.width) < 0)) {
+				return false;
+			} else {
+				return true
+			}
+			// obstacle.collision(this.player);
+		})
     }
 }
