@@ -3,9 +3,17 @@ body {
     padding: 0;
     font-family: 'Pangolin', cursive;
     font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
     font-size: 7rem;
     text-align: center;
+}
+
+canvas {
+    background-color: pink;
 }
