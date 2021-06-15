@@ -8,6 +8,8 @@ class Game {
 		this.player = new Player();
 		this.background = new Background();
 		this.obstacles = [];
+        this.rescues = [];
+        // this.cage = new Cage();
 	}
 
     preload() {
@@ -23,7 +25,8 @@ class Game {
 
         this.playerImage = loadImage('../assets/finn-walk.gif');
         this.obstacleImage = loadImage('../assets/Hero-Bullet.gif');
-
+        this.cageImage = loadImage('../assets/cage.png')
+        this.prisionerImage = loadImage('../assets/jake-waiting-dance.gif')
     }
 
     draw() {
@@ -31,22 +34,44 @@ class Game {
 		this.background.draw();
         this.player.draw();
 
+        // obstacle appearance and collision
+
         if (frameCount % 100 === 0) {
 			this.obstacles.push(new Obstacle(this.obstacleImage));
-			// console.log(this.obstacles);
 		}
 
         this.obstacles.forEach(function (obstacle) {
 			obstacle.draw();
 		})
-		// we use array filter to remove coins that collide with the player from the array
-		this.obstacles = this.obstacles.filter(obstacle => {
+
+        this.obstacles = this.obstacles.filter(obstacle => {
 			if (obstacle.collision(this.player || (obstacle.x + obstacle.width) < 0)) {
 				return false;
 			} else {
 				return true
 			}
-			// obstacle.collision(this.player);
 		})
+
+        // cage appearance and collision
+
+        if (frameCount % 500 === 0) {
+			this.rescues.push(new Cage());
+		}
+
+        this.rescues.forEach(function (rescue) {
+			rescue.draw();
+            
+            if (rescue.collision(game.player)) {
+                noLoop();
+            }
+		})
+
+    
+
+        
+
+        //need to check the collision between the player and the cage
+        // if the collision is true, then show an alert saying you won the game
     }
+
 }
