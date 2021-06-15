@@ -24,9 +24,14 @@ class Player {
 		image(game.playerImage, this.x, this.y, this.width, this.height);
 
         if (this.health <= 0) {
-
-            console.log('you died! :(')
             noLoop();
+
+            let gameOverMessage = '<h2>You lose all your health!</h2>';
+                let messageTag = document.querySelector('#message')
+
+                messageTag.classList.remove('hidden');
+                messageTag.classList.add('gameOver');
+                messageTag.innerHTML = gameOverMessage;
         }
 	}
 

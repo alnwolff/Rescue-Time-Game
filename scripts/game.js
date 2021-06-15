@@ -64,7 +64,13 @@ class Game {
             if (rescue.collision(game.player)) {
                 noLoop();
 
-                
+                let winMessage = '<h2>You rescued Jake! Good Job!</h2>';
+                let messageTag = document.querySelector('#message')
+
+                messageTag.classList.remove('hidden');
+                messageTag.classList.add('win');
+                messageTag.innerHTML = winMessage;
+
             }
 		})
 
