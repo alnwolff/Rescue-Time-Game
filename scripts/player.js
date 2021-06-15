@@ -37,10 +37,10 @@ class Player {
 
     jump() {
 		this.velocity = - 15 ;
-        game.playerImage = loadImage('../assets/finn-jump.gif');
+        game.playerImage = loadImage('assets/finn-jump.gif');
 
         const timeoutId = setTimeout(() => {
-            game.playerImage = loadImage('../assets/finn-walk.gif');
+            game.playerImage = loadImage('assets/finn-walk.gif');
           }, 1450);
 	}
 
