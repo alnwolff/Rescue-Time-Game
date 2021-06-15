@@ -22,6 +22,12 @@ class Player {
 			this.y = 530;
 		}
 		image(game.playerImage, this.x, this.y, this.width, this.height);
+
+        if (this.health <= 0) {
+
+            console.log('you died! :(')
+            noLoop();
+        }
 	}
 
     jump() {

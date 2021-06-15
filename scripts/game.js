@@ -54,7 +54,7 @@ class Game {
 
         // cage appearance and collision
 
-        if (frameCount % 500 === 0) {
+        if (frameCount % 2000 === 0) {
 			this.rescues.push(new Cage());
 		}
 
@@ -63,6 +63,8 @@ class Game {
             
             if (rescue.collision(game.player)) {
                 noLoop();
+
+                
             }
 		})
 
