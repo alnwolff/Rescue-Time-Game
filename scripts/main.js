@@ -6,16 +6,16 @@ function preload() {
 
 function setup() {
     mode = 0;
-    createCanvas(1200, 900);
+    createCanvas(900, 600);
     game.setup();
-    textSize(50);
+    textSize(40);
     textAlign(CENTER)
 
     document.querySelector('#message').classList.add('hidden')
 
     const button = createButton('RESTART GAME');
     button.mousePressed(setup);
-    button.position(600, 1300);
+    button.position(270, 780);
 
 }
 
@@ -23,7 +23,7 @@ function setup() {
 function draw () {
     clear()
     if (mode == 0) {
-        text('Press ENTER to start the Game!', 600, 300);
+        text('Press ENTER to start the Game!', 450, 300);
     }
 
     if (mode == 1) {

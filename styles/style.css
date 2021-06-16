@@ -10,27 +10,27 @@ body {
 }
 
 h1 {
-    font-size: 7rem;
+    font-size: 4rem;
     text-align: center;
 }
 
 h2 {
     color: white;
-    font-size: 5rem;
+    font-size: 3rem;
     text-align: center;
     text-shadow: 5px 5px 5px black ;
 }
 
 h3 {
-    font-size: 2rem;
+    font-size: 1rem;
     text-align: left;
 }
 
 
 
 #message {
-    height: 615px;
-    width: 950px;
+    height: 515px;
+    width: 900px;
     background-color: black;
     position: absolute;
     box-shadow: 10px 10px 15px 1px black ;
@@ -52,7 +52,7 @@ h3 {
 
 button {
     font-size: 2rem;
-    width: 950px;
+    width: 900px;
 }
 
 

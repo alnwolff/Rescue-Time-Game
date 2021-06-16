@@ -11,23 +11,23 @@ class Game {
         this.rescues = [];
         this.playerHealth = [];
         this.healthImages = [
-            {src: loadImage('assets/heart.png'), x: 20, y: 20},
-            {src: loadImage('assets/heart.png'), x: 90, y: 20},
-            {src: loadImage('assets/heart.png'), x: 160, y: 20},
-            {src: loadImage('assets/heart.png'), x: 230, y: 20},
-            {src: loadImage('assets/heart.png'), x: 300, y: 20},
+            {src: loadImage('assets/heart.png'), x: 10, y: 20},
+            {src: loadImage('assets/heart.png'), x: 70, y: 20},
+            {src: loadImage('assets/heart.png'), x: 130, y: 20},
+            {src: loadImage('assets/heart.png'), x: 190, y: 20},
+            {src: loadImage('assets/heart.png'), x: 250, y: 20},
         ];
 	}
 
     preload() {
 		this.backgroundImages = [
             { src: loadImage('assets/background/layer07_Sky.png'), x: 0, speed: 0 },
-            { src: loadImage('assets/background/layer06_Rocks.png'), x: 0, speed: 1 },
-            { src: loadImage('assets/background/layer05_Clouds.png'), x: 0, speed: 2 },
-            { src: loadImage('assets/background/layer04_Hills_2.png'), x: 0, speed: 3 },
-            { src: loadImage('assets/background/layer03_Hills_1.png'), x: 0, speed: 4 },
-            { src: loadImage('assets/background/layer02_Trees.png'), x: 0, speed: 5 },
-            { src: loadImage('assets/background/layer01_Ground.png'), x: 0, speed: 6 },
+            { src: loadImage('assets/background/layer06_Rocks.png'), x: 0, speed: 0.5 },
+            { src: loadImage('assets/background/layer05_Clouds.png'), x: 0, speed: 1.5 },
+            { src: loadImage('assets/background/layer04_Hills_2.png'), x: 0, speed: 2.5 },
+            { src: loadImage('assets/background/layer03_Hills_1.png'), x: 0, speed: 3.5 },
+            { src: loadImage('assets/background/layer02_Trees.png'), x: 0, speed: 4.5 },
+            { src: loadImage('assets/background/layer01_Ground.png'), x: 0, speed: 5.5 },
 		];
 
         this.playerImage = loadImage('assets/finn-walk.gif');
@@ -43,7 +43,7 @@ class Game {
         // health hearts
         game.healthImages.forEach(function (img) {
 
-            image(img.src, img.x, img.y, 50, 50);
+            image(img.src, img.x, img.y, 40, 40);
         })
 
         // obstacle appearance and collision
@@ -99,9 +99,6 @@ class Game {
         }
 
     
-
-        
-
 
     }
 
