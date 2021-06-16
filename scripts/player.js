@@ -26,7 +26,7 @@ class Player {
         if (this.health <= 0) {
             noLoop();
 
-            let gameOverMessage = '<h2>You lose all your health!</h2>';
+            let gameOverMessage = '<h2>You lost all your health!</h2>';
                 let messageTag = document.querySelector('#message')
 
                 messageTag.classList.remove('hidden');
@@ -43,5 +43,13 @@ class Player {
             game.playerImage = loadImage('assets/finn-walk.gif');
           }, 1450);
 	}
+
+    lowHealth(healthBar) {
+        
+        if (this.health <= 30) {
+
+            healthBar.classList.add('lowHealth');
+        }
+    }
 
 }

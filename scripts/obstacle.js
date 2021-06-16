@@ -16,12 +16,17 @@ class Obstacle {
         const playerX = playerInfo.x + playerInfo.width /2;
 		const playerY = playerInfo.y + playerInfo.height /2;
 
+        const healthBar = document.querySelector('#healthBar span')
+
+
         if (dist(obstacleX, obstacleY, playerX, playerY) > 90) {
 			return false;
 		} else {
 
             game.player.health -= 10;
-            console.log(game.player.health)
+            healthBar.innerHTML = game.player.health;
+
+            game.player.lowHealth(healthBar);
 			return true;
 		}
 

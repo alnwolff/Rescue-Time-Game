@@ -21,6 +21,11 @@ h2 {
     text-shadow: 5px 5px 5px black ;
 }
 
+h3 {
+    font-size: 2rem;
+    text-align: left;
+}
+
 canvas {
     background-color: pink;
 }
@@ -30,7 +35,7 @@ canvas {
     width: 950px;
     background-color: black;
     position: absolute;
-    box-shadow: 10px 10px 15px 10px black ;
+    box-shadow: 10px 10px 15px 1px black ;
 }
 
 .gameOver {
@@ -46,6 +51,18 @@ canvas {
 .hidden {
     display: none;
 }
+
+#healthBar {
+    display: flex;
+    justify-content: flex-start;
+    width: 950px;
+}
+
+.lowHealth {
+    color: red;
+    font: 2.5rem;
+}
+
 
 
 

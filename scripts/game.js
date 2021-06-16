@@ -78,8 +78,7 @@ class Game {
 
         
 
-        //need to check the collision between the player and the cage
-        // if the collision is true, then show an alert saying you won the game
+
     }
 
 }
