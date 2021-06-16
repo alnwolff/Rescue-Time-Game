@@ -30,8 +30,6 @@ class Cage {
         if (dist(cageX, cageY, playerX, playerY) > 150) {
 			return false;
 		} else {
-
-            console.log('you WON!')
 			return true;
 		}
 

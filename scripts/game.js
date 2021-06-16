@@ -9,7 +9,14 @@ class Game {
 		this.background = new Background();
 		this.obstacles = [];
         this.rescues = [];
-        // this.cage = new Cage();
+        this.playerHealth = [];
+        this.healthImages = [
+            {src: loadImage('assets/heart.png'), x: 20, y: 20},
+            {src: loadImage('assets/heart.png'), x: 90, y: 20},
+            {src: loadImage('assets/heart.png'), x: 160, y: 20},
+            {src: loadImage('assets/heart.png'), x: 230, y: 20},
+            {src: loadImage('assets/heart.png'), x: 300, y: 20},
+        ];
 	}
 
     preload() {
@@ -25,14 +32,19 @@ class Game {
 
         this.playerImage = loadImage('assets/finn-walk.gif');
         this.obstacleImage = loadImage('assets/Hero-Bullet.gif');
-        this.cageImage = loadImage('assets/cage.png')
-        this.prisionerImage = loadImage('assets/jake-waiting-dance.gif')
+        this.cageImage = loadImage('assets/cage.png');
+        this.prisionerImage = loadImage('assets/jake-waiting-dance.gif');
     }
 
     draw() {
-		clear();
 		this.background.draw();
         this.player.draw();
+
+        // health hearts
+        game.healthImages.forEach(function (img) {
+
+            image(img.src, img.x, img.y, 50, 50);
+        })
 
         // obstacle appearance and collision
 
@@ -62,7 +74,7 @@ class Game {
 			rescue.draw();
             
             if (rescue.collision(game.player)) {
-                noLoop();
+                mode = 0;
 
                 let winMessage = '<h2>You rescued Jake! Good Job!</h2>';
                 let messageTag = document.querySelector('#message')
@@ -73,6 +85,18 @@ class Game {
 
             }
 		})
+
+        if (this.healthImages.length <= 0) {
+            mode = 0;
+
+            let gameOverMessage = '<h2>You lost all your health!</h2>';
+                let messageTag = document.querySelector('#message')
+
+                messageTag.classList.remove('hidden');
+                messageTag.classList.remove('win');
+                messageTag.classList.add('gameOver');
+                messageTag.innerHTML = gameOverMessage;
+        }
 
     
 

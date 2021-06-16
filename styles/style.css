@@ -26,9 +26,7 @@ h3 {
     text-align: left;
 }
 
-canvas {
-    background-color: pink;
-}
+
 
 #message {
     height: 615px;
@@ -52,15 +50,9 @@ canvas {
     display: none;
 }
 
-#healthBar {
-    display: flex;
-    justify-content: flex-start;
+button {
+    font-size: 2rem;
     width: 950px;
-}
-
-.lowHealth {
-    color: red;
-    font: 2.5rem;
 }
 
 

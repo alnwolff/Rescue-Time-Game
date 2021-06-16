@@ -2,7 +2,6 @@ class Player {
 
     constructor() {
 
-        this.health = 100;
         this.velocity = 0;
 		this.gravity = 0.4;
 		this.width = 200;
@@ -13,6 +12,7 @@ class Player {
     }
 
     draw() {
+
 		// this pushes the player down
 		this.velocity += this.gravity;
 		this.y += this.velocity;
@@ -23,16 +23,6 @@ class Player {
 		}
 		image(game.playerImage, this.x, this.y, this.width, this.height);
 
-        if (this.health <= 0) {
-            noLoop();
-
-            let gameOverMessage = '<h2>You lost all your health!</h2>';
-                let messageTag = document.querySelector('#message')
-
-                messageTag.classList.remove('hidden');
-                messageTag.classList.add('gameOver');
-                messageTag.innerHTML = gameOverMessage;
-        }
 	}
 
     jump() {
@@ -43,13 +33,5 @@ class Player {
             game.playerImage = loadImage('assets/finn-walk.gif');
           }, 1450);
 	}
-
-    lowHealth(healthBar) {
-        
-        if (this.health <= 30) {
-
-            healthBar.classList.add('lowHealth');
-        }
-    }
 
 }
