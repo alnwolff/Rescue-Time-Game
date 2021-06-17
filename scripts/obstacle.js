@@ -21,8 +21,8 @@ class Obstacle {
 		} else {
 
             game.healthImages.pop();
-            impactSound.play();
-            impactSound.setVolume(0.4);
+            game.impactSound.play();
+            game.impactSound.setVolume(0.4);
 
 			return true;
 		}

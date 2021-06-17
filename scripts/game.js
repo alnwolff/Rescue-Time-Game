@@ -2,6 +2,10 @@ class Game {
 
     constructor() {
 		this.backgroundImages;
+        let bgMusic;
+        let impactSound;
+        let winMusic;
+        let loseMusic;
 	}
 
     setup() {
@@ -34,6 +38,13 @@ class Game {
         this.obstacleImage = loadImage('assets/Hero-Bullet.gif');
         this.cageImage = loadImage('assets/cage.png');
         this.prisionerImage = loadImage('assets/jake-waiting-dance.gif');
+
+        // sound
+        soundFormats('wav');
+        this.bgMusic = loadSound("sounds/background.wav");
+        this.impactSound = loadSound('sounds/impact.wav');
+        this.winMusic = loadSound('sounds/win.wav');
+        this.loseMusic = loadSound('sounds/lose.wav');
     }
 
     draw() {
@@ -82,9 +93,9 @@ class Game {
                 messageTag.classList.remove('hidden');
                 messageTag.classList.add('win');
                 messageTag.innerHTML = winMessage;
-                bgMusic.stop();
-                winMusic.play();
-                winMusic.setVolume(0.6);
+                game.bgMusic.stop();
+                game.winMusic.play();
+                game.winMusic.setVolume(0.6);
 
             }
 		})
@@ -99,9 +110,9 @@ class Game {
                 messageTag.classList.remove('win');
                 messageTag.classList.add('gameOver');
                 messageTag.innerHTML = gameOverMessage;
-                bgMusic.stop();
-                loseMusic.play();
-                loseMusic.setVolume(1);
+                this.bgMusic.stop();
+                this.loseMusic.play();
+                this.loseMusic.setVolume(1);
         }
 
     

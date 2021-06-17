@@ -1,21 +1,13 @@
 const game = new Game();
-let bgMusic;
-let impactSound;
-let winMusic;
-let loseMusic;
+
 
 function preload() {
     game.preload();
-    soundFormats('wav');
-    bgMusic = loadSound("sounds/background.wav");
-    impactSound = loadSound('sounds/impact.wav');
-    winMusic = loadSound('sounds/win.wav');
-    loseMusic = loadSound('sounds/lose.wav');
 }
 
 function setup() {
     mode = 0;
-    bgMusic.stop()
+    game.bgMusic.stop()
     createCanvas(900, 600);
     game.setup();
     textSize(40);
@@ -47,8 +39,7 @@ function keyPressed() {
 
     if (keyCode === ENTER) {
         mode = 1;
-        bgMusic.loop();
-        bgMusic.setVolume(0.5);
+        game.bgMusic.loop();
+        game.bgMusic.setVolume(0.5);
     }
-
 }
