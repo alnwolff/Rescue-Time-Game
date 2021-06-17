@@ -87,7 +87,7 @@ class Game {
             if (rescue.collision(game.player)) {
                 mode = 0;
 
-                let winMessage = '<h2>You rescued Jake! Good Job!</h2>';
+                let winMessage = '<h1>You rescued Jake! Good Job!</h1>';
                 let messageTag = document.querySelector('#message')
 
                 messageTag.classList.remove('hidden');
@@ -103,7 +103,7 @@ class Game {
         if (this.healthImages.length <= 0) {
             mode = 0;
 
-            let gameOverMessage = '<h2>You lost all your health!</h2>';
+            let gameOverMessage = '<h1>You lost all your health!</h1>';
                 let messageTag = document.querySelector('#message')
 
                 messageTag.classList.remove('hidden');

@@ -1,22 +1,26 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Pangolin', cursive;
+    font-family: 'Nova Mono';
     font-size: 16px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: rgb(61,107,145);
+    background: linear-gradient(0deg, rgba(61,107,145,1) 0%, rgba(122,168,205,1) 30%, rgba(122,168,205,1) 70%, rgba(61,107,145,1) 100%);
 }
 
 h1 {
+    color: #cde4f3;
     font-size: 4rem;
     text-align: center;
+    text-shadow: 5px 5px 5px black ;
 }
 
 h2 {
     color: white;
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
     text-shadow: 5px 5px 5px black ;
 }
@@ -53,7 +57,79 @@ h3 {
 button {
     font-size: 2rem;
     width: 900px;
+    font-family: 'Nova Mono', monospace;
 }
+
+.logo {
+    width: 235px;
+}
+
+.sectionStyle {
+    background-color: rgb(225, 234, 241);
+    border-radius: 25px;
+    margin-bottom: 40px;
+}
+
+.sectionImg {
+    height: 200px;
+}
+
+.pStyle {
+    width: 200px;
+    text-align: center;
+}
+
+#story {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#story div {
+    width: 600px;
+    height: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.iceKing-attack {
+    width: 100px;
+}
+
+#instructions div {
+    width: 600px;
+    height: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.health img {
+    width: 40px;
+}
+
+.health {
+    margin-left: 10px;
+}
+
+#play {
+    width: 100px;
+    color: rgb(191, 221, 245);
+    background-color: rgba(61,107,145,1);
+    margin-bottom: 20px;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px;
+    font-size: 1.2rem;
+    box-shadow: 2px 2px 2px 0px black;
+    border-radius: 25px;
+}
+
+
 
 
 
