@@ -28,11 +28,14 @@ h2 {
 h3 {
     font-size: 1rem;
     text-align: left;
+    color: #94c9ec;
 }
 
 
 
+
 #message {
+    margin-top: 150px;
     height: 515px;
     width: 900px;
     background-color: black;
@@ -50,6 +53,7 @@ h3 {
     background-size: cover;
 }
 
+
 .hidden {
     display: none;
 }
@@ -61,6 +65,10 @@ button {
 
 .logo {
     width: 235px;
+}
+
+.title {
+    margin-top: -40px;
 }
 
 .sectionStyle {
@@ -128,6 +136,10 @@ button {
     border-radius: 25px;
 }
 
+.book img {
+    width: 110px;
+}
+
 .snail-hi {
     width: 100px;
 }
@@ -140,6 +152,8 @@ button {
     align-items: center;
     padding-bottom: 10px;
 }
+
+
 
 
 

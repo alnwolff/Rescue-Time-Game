@@ -6,12 +6,14 @@ class Game {
         let impactSound;
         let winMusic;
         let loseMusic;
+        let pageSound;
 	}
 
     setup() {
 		this.player = new Player();
 		this.background = new Background();
 		this.obstacles = [];
+        this.pages = [];
         this.rescues = [];
         this.playerHealth = [];
         this.healthImages = [
@@ -38,6 +40,7 @@ class Game {
         this.obstacleImage = loadImage('assets/Hero-Bullet.gif');
         this.cageImage = loadImage('assets/cage.png');
         this.prisionerImage = loadImage('assets/jake-waiting-dance.gif');
+        this.pageImage = loadImage('assets/page.png');
 
         // sound
         soundFormats('wav');
@@ -45,6 +48,7 @@ class Game {
         this.impactSound = loadSound('sounds/impact.wav');
         this.winMusic = loadSound('sounds/win.wav');
         this.loseMusic = loadSound('sounds/lose.wav');
+        this.pageSound = loadSound('sounds/getScroll.wav');
     }
 
     draw() {
@@ -98,6 +102,24 @@ class Game {
                 game.winMusic.setVolume(0.6);
 
             }
+		})
+
+        // scrolls appearance and collision
+
+        if (frameCount % 150 === 0) {
+			this.pages.push(new Page(this.pageImage));
+		}
+
+        this.pages.forEach(function (page) {
+			page.draw();
+		})
+
+        this.pages = this.pages.filter(page => {
+			if (page.collision(this.player || (page.x + page.width) < 0)) {
+				return false;
+			} else {
+				return true
+			}
 		})
 
         if (this.healthImages.length <= 0) {

@@ -8,6 +8,7 @@ class Player {
 		this.height = 210;
 		this.x = 100;
 		this.y = 325;
+		this.collectedPages = 0;
 
     }
 
@@ -23,6 +24,10 @@ class Player {
 		}
 		this.y = constrain(this.y, 0, 325); 
 		image(game.playerImage, this.x, this.y, this.width, this.height);
+		
+		textSize(20);
+		text(`Pages Collected : ${this.collectedPages}`, 800, 50);
+
 	}
 
     jump() {
