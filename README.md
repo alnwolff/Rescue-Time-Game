@@ -24,15 +24,14 @@ I chose to do it with p5.
 
 ## Story of the Game:
 
-The Ice King has kidnapped Jake!.
-Finn is the only one who can save him!. Help him cross the forest and find Jake.
+The Ice King took the Enchiridion and kidnapped Jake!. Finn is the only one who can save him!. Help him cross the Forest and find Jake.
 
 ## Instructions for playing:
 
 * Press 'SPACE' to JUMP and avoid Ice King's attacks.
 * If you are hit by an attack, you will lose one HEART.
-* If you lose all the HEARTS, Ice King will win, and its
-GAME OVER.
+* Collect all the PAGES from the Enchiridion, the book of Heroes, as you go through the Forest.
+* If you lose all the HEARTS, Ice King will win, and its GAME OVER.
 
 ## Disclaimer:
 
