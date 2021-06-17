@@ -1,11 +1,21 @@
 const game = new Game();
+let bgMusic;
+let impactSound;
+let winMusic;
+let loseMusic;
 
 function preload() {
     game.preload();
+    soundFormats('wav');
+    bgMusic = loadSound("sounds/background.wav");
+    impactSound = loadSound('sounds/impact.wav');
+    winMusic = loadSound('sounds/win.wav');
+    loseMusic = loadSound('sounds/lose.wav');
 }
 
 function setup() {
     mode = 0;
+    bgMusic.stop()
     createCanvas(900, 600);
     game.setup();
     textSize(40);
@@ -16,7 +26,6 @@ function setup() {
     const button = createButton('RESTART GAME');
     button.mousePressed(setup);
     button.position(270, 780);
-
 }
 
 
@@ -38,6 +47,8 @@ function keyPressed() {
 
     if (keyCode === ENTER) {
         mode = 1;
+        bgMusic.loop();
+        bgMusic.setVolume(0.5);
     }
 
 }

@@ -82,6 +82,9 @@ class Game {
                 messageTag.classList.remove('hidden');
                 messageTag.classList.add('win');
                 messageTag.innerHTML = winMessage;
+                bgMusic.stop();
+                winMusic.play();
+                winMusic.setVolume(0.6);
 
             }
 		})
@@ -96,6 +99,9 @@ class Game {
                 messageTag.classList.remove('win');
                 messageTag.classList.add('gameOver');
                 messageTag.innerHTML = gameOverMessage;
+                bgMusic.stop();
+                loseMusic.play();
+                loseMusic.setVolume(1);
         }
 
     
