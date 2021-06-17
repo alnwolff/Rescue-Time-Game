@@ -23,7 +23,6 @@ class Player {
 		}
 		this.y = constrain(this.y, 0, 325); 
 		image(game.playerImage, this.x, this.y, this.width, this.height);
-
 	}
 
     jump() {
