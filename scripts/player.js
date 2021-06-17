@@ -21,6 +21,7 @@ class Player {
 			// we reset the y to it's starting position
 			this.y = 325;
 		}
+		this.y = constrain(this.y, 0, 325); 
 		image(game.playerImage, this.x, this.y, this.width, this.height);
 
 	}

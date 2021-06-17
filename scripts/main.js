@@ -11,7 +11,6 @@ function setup() {
     createCanvas(900, 600);
     game.setup();
     textSize(40);
-    textFont('Nova Mono');
     textAlign(CENTER)
 
     document.querySelector('#message').classList.add('hidden')
