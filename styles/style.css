@@ -129,7 +129,19 @@ button {
     border-radius: 25px;
 }
 
+.snail-hi {
+    width: 100px;
+}
 
+#disclaimer div {
+    width: 600px;
+    height: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 10px;
+
+}
 
 
 
